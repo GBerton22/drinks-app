@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import DrinkCard from "../components/DrinkCard";
-import Filter  from "../components/Filter";
+import Filter from "../components/Filter";
 
 function Home() {
   const [favorites, setFavorites] = useState([]);
@@ -41,6 +41,5 @@ function Home() {
     </section>
   );
 }
-import Filter from "../components/Filter";
 
 export default Home;

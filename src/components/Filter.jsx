@@ -9,4 +9,5 @@ function Filter({ setInputValue }) {
     <input onChange={handleFilter} type="text" placeholder="Filter by name" />
   );
 }
+
 export default Filter;
