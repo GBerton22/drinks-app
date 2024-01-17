@@ -14,22 +14,21 @@ function DrinkCard(props) {
     // if (props.favorite.includes(props.drink.idDrink)) {
     //   props.removeFavorite(props.drink.idDrink);
     // }
-    setFavorite(!favorite);
+    setFavorites(!favorite);
   };
-  return (
+    return (
     <div className="card card-compact w-96 bg-base-100 shadow-xl">
       <figure>
-        <img src={props.drink.strDrinkThumb} alt="Drinks" />
+        <img
+          src={props.drink.strDrinkThumb} 
+          alt="Drinks"
+        />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{props.drink.strDrink}</h2>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">
-            <Link to={`/detail/${props.drink.idDrink}`}>View</Link>
-          </button>
-          <button onClick={handleFavorite} className="btn btn-primary">
-            {props.favorites.includes(props.drink.idDrink) ? "💛" : "🤍"}
-          </button>
+          <button className="btn btn-primary"><Link to={`/detail/${props.drink.idDrink}`}>View</Link></button>
+          <button onClick={handleFavorite} className="btn btn-primary">{favorite ? '💛' : '🤍'}</button>
         </div>
       </div>
     </div>

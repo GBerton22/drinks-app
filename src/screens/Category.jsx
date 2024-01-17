@@ -26,15 +26,18 @@ function Category() {
         {" "}
         {idCategory.toUpperCase().replace("_", " ")}{" "}
       </h2>
-      <ul className="flex flex-wrap gap-6">
         {drinks.length > 0 ? (
-          drinks
+      <ul className="flex flex-wrap gap-6">
+          {drinks
             .slice(0, 21)
             .map((drink) => <DrinkCard key={drink.idDrink} drink={drink} />)
+          }
+          </ul>
         ) : (
-          <p>Loading...</p>
+          <div className="flex items-center justify-center h-screen">
+          <span className="loading loading-spinner loading-lg"></span>
+        </div>
         )}
-      </ul>
     </section>
   );
 }

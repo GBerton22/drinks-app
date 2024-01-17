@@ -21,24 +21,26 @@ function Home() {
 
   return (
     <section>
-        <Filter setInputValue />
-      <ul className="flex flex-wrap gap-6">
-        {drinks.length > 0 ? (
-          drinks
-            .slice(0, 21)
-            .map((drink) => (
-              <DrinkCard
-                key={drink.idDrink}
-                drink={drink}
-                favorites={favorites}
-                setFavorites={setFavorites}
-              />
-            ))
-        ) : (
-          <p>Loading...</p>
-        )}
-      </ul>
-    </section>
+  <Filter setInputValue />
+  {drinks.length > 0 ? (
+    <ul className="flex flex-wrap gap-6">
+      {drinks
+        .slice(0, 21)
+        .map((drink) => (
+          <DrinkCard
+            key={drink.idDrink}
+            drink={drink}
+            favorites={favorites}
+            setFavorites={setFavorites}
+          />
+        ))}
+    </ul>
+  ) : (
+    <div className="flex items-center justify-center h-screen">
+      <span className="loading loading-spinner loading-lg"></span>
+    </div>
+  )}
+</section>
   );
 }
 

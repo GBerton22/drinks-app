@@ -46,6 +46,9 @@ function Favorites() {
           <p>No hay bebidas favoritas guardadas.</p>
         )}
       </ul>
+      <div className="flex items-center justify-center h-screen">
+      <span className="loading loading-spinner loading-lg"></span>
+    </div>  
     </div>
   );
 }
